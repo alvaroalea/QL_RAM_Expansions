@@ -449,7 +449,7 @@
 			(uuid "799e761c-1426-40e9-a069-1f4cb353bfaa")
 		)
 		(embedded_fonts no)
-		(model "${KICAD6_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-223.wrl"
+		(model "${KIPRJMOD}/packages3D/SOT-223.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -1964,7 +1964,7 @@
 			(uuid "128e34ce-eee7-477d-b905-a493e98db783")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Capacitor_THT.3dshapes/CP_Radial_D6.3mm_P2.50mm.step"
+		(model "${KIPRJMOD}/packages3D/CP_Radial_D6.3mm_P2.50mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -2163,7 +2163,7 @@
 			(uuid "ca0d7b70-c355-4cf7-9c9a-682681f604a1")
 		)
 		(embedded_fonts no)
-		(model "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1206_3216Metric.wrl"
+		(model "${KIPRJMOD}/packages3D/C_1206_3216Metric.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -3678,7 +3678,7 @@
 			(uuid "2f504208-ee07-4e22-9b3c-4f2ff7079623")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Capacitor_THT.3dshapes/CP_Radial_D6.3mm_P2.50mm.step"
+		(model "${KIPRJMOD}/packages3D/CP_Radial_D6.3mm_P2.50mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -3877,7 +3877,7 @@
 			(uuid "9a893144-556c-4a42-b210-ff263922dff9")
 		)
 		(embedded_fonts no)
-		(model "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1206_3216Metric.wrl"
+		(model "${KIPRJMOD}/packages3D/C_1206_3216Metric.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -5378,18 +5378,18 @@
 			(uuid "c490b13a-c558-44e3-9f22-1ea8c2a15479")
 		)
 		(embedded_fonts no)
-		(model "${KICAD6_3DMODEL_DIR}/Connector_DIN.3dshapes/DIN41612_B_2x32_Male_Horizontal_THT.wrl"
+		(model "${KIPRJMOD}/packages3D/DIN41612_Q_2x32_Female_RightAngle_THT.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
 			(scale
-				(xyz 1 1 1)
+				(xyz 0.394 0.394 0.394)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -0 -0 180)
 			)
 		)
-		(model "/home/alvaro/kicadprojects/8bits_kicad_libraries/packages3d/DIN41612_Q_2x32_Female_RightAngle_THT.wrl"
+		(model "${KIPRJMOD}/packages3D/DIN41612_Q_2x32_Female_RightAngle_THT.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -5398,6 +5398,17 @@
 			)
 			(rotate
 				(xyz 0 0 180)
+			)
+		)
+		(model "${KIPRJMOD}/packages3D/DIN41612_B_2x32_Male_Horizontal_THT.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
 			)
 		)
 	)
@@ -6890,18 +6901,18 @@
 			(uuid "71155961-9f38-422e-8133-e0318990d01c")
 		)
 		(embedded_fonts no)
-		(model "${KICAD6_3DMODEL_DIR}/Connector_DIN.3dshapes/DIN41612_B_2x32_Male_Horizontal_THT.wrl"
+		(model "${KIPRJMOD}/packages3D/DIN41612_B_2x32_Male_RightAngle_THT.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
 			(scale
-				(xyz 1 1 1)
+				(xyz 0.394 0.394 0.394)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -0 -0 180)
 			)
 		)
-		(model "/home/alvaro/kicadprojects/8bits_kicad_libraries/packages3d/DIN41612_B_2x32_Male_RightAngle_THT.wrl"
+		(model "${KIPRJMOD}/packages3D/DIN41612_B_2x32_Male_RightAngle_THT.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -6910,6 +6921,17 @@
 			)
 			(rotate
 				(xyz 0 0 180)
+			)
+		)
+		(model "${KIPRJMOD}/packages3D/DIN41612_B_2x32_Male_Horizontal_THT.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
 			)
 		)
 	)
@@ -7604,7 +7626,7 @@
 			(uuid "3bfddffd-3357-4a58-bd42-2f5b4d46a70d")
 		)
 		(embedded_fonts no)
-		(model "${KICAD8_3DMODEL_DIR}/Package_SO.3dshapes/TSOP-II-44_10.16x18.41mm_P0.8mm.wrl"
+		(model "${KIPRJMOD}/packages3D/TSOP-II-44_10.16x18.41mm_P0.8mm.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -7803,7 +7825,7 @@
 			(uuid "b79a793d-f802-4ca5-b0c1-7bf6071c85ba")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_1206_3216Metric.step"
+		(model "${KIPRJMOD}/packages3D/R_1206_3216Metric.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -8069,15 +8091,15 @@
 			(uuid "c7f92c89-aaac-4a09-bb84-89293167502c")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Package_DIP.3dshapes/DIP-4_W7.62mm_Socket.step"
+		(model "${KIPRJMOD}/packages3D/dipswitch_2pos_418117270902+%28rev1%29.stp"
 			(offset
-				(xyz 0 0 0)
+				(xyz 3.75 -1 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -0 -0 90)
 			)
 		)
 	)
@@ -8515,7 +8537,7 @@
 			(uuid "a9e4657a-3bcb-4043-8919-d28c6ee59a9d")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Package_DIP.3dshapes/DIP-20_W7.62mm_Socket.step"
+		(model "${KIPRJMOD}/packages3D/DIP-20_W7.62mm_Socket.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -8714,7 +8736,7 @@
 			(uuid "defdb59c-ace0-4147-97f4-b6fd5145d1e1")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_1206_3216Metric.step"
+		(model "${KIPRJMOD}/packages3D/R_1206_3216Metric.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -8913,7 +8935,7 @@
 			(uuid "ee9b56d4-6b37-466f-a98d-a669efa91bf0")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_1206_3216Metric.step"
+		(model "${KIPRJMOD}/packages3D/R_1206_3216Metric.step"
 			(offset
 				(xyz 0 0 0)
 			)

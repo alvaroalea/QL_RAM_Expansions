@@ -1,6 +1,6 @@
 # SINCLAIR QL 896kB External Rom Expansion
 
-(C) 2022 Alvaro Alea Fernandez
+(C) 2026 Alvaro Alea Fernandez
 
 License under: CERN Open Hardware Licence Version 2 - Strongly Reciprocal
 
