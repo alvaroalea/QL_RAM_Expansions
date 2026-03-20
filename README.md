@@ -9,7 +9,7 @@ https://ohwr.org/cern_ohl_s_v2.txt
 
 This reporsitory contains severals design of RAM expansion boards for the Sinclair QL, some of them area new design, and other are reverse enginiered of products seld in the 80's for the sinclair QL:
 
-## QL_external_ram_892Kb
+## QL_external_ram_896Kb
 
 New design in 2026, based on qubide card of liont, https://hackaday.io/project/183490-qubide-clone-with-640k-or-704k-ram-upgrade-for-ql
 
