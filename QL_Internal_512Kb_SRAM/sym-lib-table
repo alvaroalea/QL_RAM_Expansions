@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "qL_internal512kram-eagle-import")(type "KiCad")(uri "${KIPRJMOD}/qL_internal512kram-eagle-import.kicad_sym")(options "")(descr ""))
+)
