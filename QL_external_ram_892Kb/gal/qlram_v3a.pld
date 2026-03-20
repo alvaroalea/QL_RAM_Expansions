@@ -1,0 +1,46 @@
+GAL16V8
+Ram512ext
+; 1  2   3  4     5   6    7   8      9      10
+/DS A17 A16 A15   RD  /AS  JP2 JP1    A19    GND
+A18 RA3 RA2 DTACK RA  DSMC TC2 /RAMOE /RAMCE VCC
+;11 12  13  14    15  16   17  18     19     20
+
+;JP1 JP2 (jumper ON = 0)
+;11 OFF OFF - 640Kb, Standar +512Kb RAM
+;10 OFF  ON - 896Kb, Standar +512Kb + 256Kb RAM, maximun in QL
+;01  ON OFF - 832Kb, Standar +512Kb + 192Kb RAM, free 64Kb for aditional roms
+;00  ON  ON - special config that only server the last 256Kb for use with expanded QL.
+;
+; TC2 is the PIN13 of the GAL1 of the TRUMP CARD DISC INTERFACE, and when active low inhibit the first 32Kb of last 256Kb block of memory (to allow ROM of trump to be mapped on 0xC0000)
+
+
+; OLMC in 16V8 has only 8 terms, and I need 11, so I use RA2 to complete RA
+
+RA =  JP1 *            /A19 *   A18 + ; Los primeros 512Kb se sirven siempre menos 00.
+           JP2 *       /A19 *   A18 + ; Los primeros 512Kb se sirven siempre menos 00.
+      JP1 *             A19 *  /A18 + ; Los primeros 512Kb se sirven siempre menos 00.
+           JP2 *        A19 *  /A18 + ; Los primeros 512Kb se sirven siempre menos 00.
+     /JP1      * TC2 *  A19 *  A18 * /A17 * /A16 * /A15  + ; 32K compartidos con Trump Card
+          /JP2 * TC2 *  A19 *  A18 * /A17 * /A16 * /A15  + ; 32K compartidos con Trump Card
+     RA2
+
+RA2 = /JP1           *  A19 *  A18 * /A17 * /A16 *  A15  + ; 32K  se sirven siempre
+          /JP2       *  A19 *  A18 * /A17 * /A16 *  A15  + ; 32K  se sirven siempre
+      /JP1           *  A19 *  A18 * /A17 *  A16 + ; 64K  se sirven en cfg 2,3,4 y llevamos ST+512+128 = 768Kb
+          /JP2       *  A19 *  A18 * /A17 *  A16 + ; 64K  se sirven en cfg 2,3,4 y llevamos ST+512+128 = 768Kb
+      /JP1           *  A19 *  A18 *  A17 * /A16 + ; 64K  se sirven en cgg 2,3,4 y llevamos ST+512+192 = 832Kb
+          /JP2       *  A19 *  A18 *  A17   ; los ultimos 64Kb se sirven solo en cfg 2,4
+
+
+RAMCE = RA * AS
+
+RAMOE = RA * AS * DS
+
+DSMC.T = VCC
+DSMC.E = RA * AS
+
+DTACK.T = GND
+DTACK.E = RA * DS
+
+DESCRIPTION:
+Extra RAM for Sinclair QL

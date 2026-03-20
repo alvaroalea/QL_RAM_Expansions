@@ -1,0 +1,46 @@
+GAL16V8
+Ram512ext
+; 1  2   3  4     5   6    7   8      9      10
+/DS A17 A16 A15   RD  /AS  JP2 JP1    A19    GND
+A18 RA3 RA2 DTACK RA  DSMC TC2 /RAMOE /RAMCE VCC
+;11 12  13  14    15  16   17  18     19     20
+
+; JP1 JP2 (jumper ON = 0)
+; 1X OFF XXX - 896Kb RAM
+; 0X  ON XXX - 896Kb + Shadow RAM
+
+; TC2 is the PIN13 of the GAL1 of the TRUMP CARD DISC INTERFACE, and when active low inhibit the first 32Kb of last 256Kb block
+; of memory (to allow ROM of trump to be mapped on 0xC0000)
+
+; OLMC in 16V8 has only 8 terms, and I need 11, so I use RA2 to complete RA
+
+RA =        /A19 *  A18  +
+             A19 * /A18  +
+      TC2 *  A19 *  A18 * /A17 * /A16 * /A15  + ; 32K compartidos con Trump Card
+             A19 *  A18 * /A17 * /A16 *  A15  + ; 32K  se sirven siempre
+             A19 *  A18 * /A17 *  A16 +
+             A19 *  A18 *  A17 +
+     /JP1 * /A19 * /A18 *  A17
+
+RA2 =       /A19 *  A18  +
+             A19 * /A18  +
+      TC2 *  A19 *  A18 * /A17 * /A16 * /A15  + ; 32K compartidos con Trump Card
+             A19 *  A18 * /A17 * /A16 *  A15  + ; 32K  se sirven siempre
+             A19 *  A18 * /A17 *  A16 +
+             A19 *  A18 *  A17 +
+     /JP1 * /A19 * /A18 *  A17 * /RD
+
+
+
+RAMCE = RA * AS  ; El chip se activa siempre
+
+RAMOE = RA * AS * DS ; la salida siempre menos al escribir shadow
+
+DSMC.T = VCC
+DSMC.E = RA * AS ; desactivamos el ql siempre menos al escribir
+
+DTACK.T = GND
+DTACK.E = RA2 * DS ; finalizamos el ciclo siempre
+
+DESCRIPTION:
+Extra RAM for Sinclair QL
