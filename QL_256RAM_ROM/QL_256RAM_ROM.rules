@@ -1,0 +1,86 @@
+
+(rules PCB ramrom
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 12)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.3)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.8)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.0)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd-smd))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (class default
+    +9V GND VCC "Net-(C5-Pad1)" /DSMC /MUX "unconnected-(J1-Pada2)" "unconnected-(J1-Pada3)"
+    "unconnected-(J1-Pada8)" /A3 /A4 /A5 /A6 /A7 /A8 /A9
+    /A10 /A11 /A12 /A13 /A14 "unconnected-(J1-Pada21)" "unconnected-(J1-Pada22)" /A16
+    /A17 /A18 /A19 /D7 /D6 /D5 /D4 /D3
+    "unconnected-(J1-Padb3)" "unconnected-(J1-Padb4)" "unconnected-(J1-Padb5)" "unconnected-(J1-Padb6)" /A2 /A1 "unconnected-(J1-Padb10)" /A0
+    "unconnected-(J1-Padb12)" "unconnected-(J1-Padb13)" "unconnected-(J1-Padb14)" "unconnected-(J1-Padb15)" "unconnected-(J1-Padb16)" /VPA "unconnected-(J1-Padb18)" /E
+    "unconnected-(J1-Padb20)" /RESET /A15 "unconnected-(J1-Padb23)" "unconnected-(J1-Padb24)" /DTACK /RW /DS
+    "unconnected-(J1-Padb28)" /D0 /D1 /D2 /SP0 /SP1 /SP2 /SP3
+    "/VPA_TR" "Net-(R1-Pad2)" "/ROM_OE" /CAS "unconnected-(U7-Pad26)" /RAS /MA1 /MA2
+    /MA3 /MA4 /MA5 /MA6 /MA7 /MA8 "Net-(D2-Pad1)" /MA0
+    "Net-(R2-Pad1)" "Net-(D1-Pad1)" "unconnected-(U2-Pad9)"
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    (clearance_class "kicad_default")
+    (via_rule "kicad_default")
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
