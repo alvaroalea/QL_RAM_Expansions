@@ -28,3 +28,7 @@ This is a clone of a model sell in ebay of a internal expansion RAM, similar to 
 ## QL_2560RAM_ROM
 
 A board saw in theqlforum that include 256Kb of RAM and an chip of ROM, ideally to incorporate a ToolKit to the RAM expansion
+
+## QL_Miracle_Trump_RAM
+
+A board saw in theqlforum, this board include 2x256Kb of Dinamic RAM, for use with normal QL or QL with Trump Card 0Kb.
