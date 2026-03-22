@@ -10,6 +10,6 @@ https://ohwr.org/cern_ohl_s_v2.txt
 
 
 
-![My image](QL_external_ram_892Kb.png) 
+![My image](QL_Miracle_Trump_RAM.png) 
 
 
